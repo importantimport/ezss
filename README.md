@@ -1,4 +1,4 @@
-# EZSS
+# EZSS [![npm](https://img.shields.io/npm/v/ezss)](https://npmjs.com/package/ezss)
 
 Easier alternative of `react-secure-storage`.
 
@@ -45,3 +45,7 @@ export const useSecureLocalStorage =
     })
   }
 ```
+
+## License
+
+Licensed under the [MIT](LICENSE).

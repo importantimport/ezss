@@ -31,11 +31,3 @@ export class EncryptionService {
     return AES.encrypt(message, this.key).toString()
   }
 }
-
-// const encryption = new EncryptionService({ keySuffix: '---HELLO WORLD---' })
-
-// const ciphertext = encryption.encrypt('Hello World')
-
-// const result = encryption.decrypt(ciphertext)
-
-// console.log(ciphertext, result)
