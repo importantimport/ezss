@@ -1,4 +1,4 @@
-# EZSS [![npm](https://img.shields.io/npm/v/ezss)](https://npmjs.com/package/ezss)
+# EZSS [![npm](https://img.shields.io/npm/v/ezss)](https://npmjs.com/package/ezss) [![install size](https://pkg-size.dev/badge/install/24426)](https://pkg-size.dev/ezss) [![bundle size](https://pkg-size.dev/badge/bundle/20393)](https://pkg-size.dev/ezss)
 
 Easier alternative of `react-secure-storage`.
 
