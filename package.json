@@ -5,6 +5,8 @@
   "description": "Easier alternative of react-secure-storage.",
   "author": "藍+85CD",
   "license": "MIT",
+  "repository": "github:importantimport/ezss",
+  "bugs": "https://github.com/importantimport/ezss/issues",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
