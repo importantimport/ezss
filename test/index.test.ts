@@ -4,6 +4,9 @@ import { describe, expect, test } from 'vitest'
 import * as ezss from '~/index'
 
 describe('ezss', () => {
+  test('export default', () => {
+    expect(ezss.default).toBeDefined()
+  })
   test('export EncryptionService', () => {
     expect(ezss.EncryptionService).toBeDefined()
   })

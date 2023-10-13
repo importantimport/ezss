@@ -1,11 +1,11 @@
 // eslint-disable-next-line n/no-unpublished-import
 import { describe, expect, test } from 'vitest'
 
-import { EncryptionService } from '~/index'
+import encryption, { EncryptionService } from '~/index'
 
 describe('ezss.EncryptionService', () => {
   test('encryption', () => {
-    const encryption = new EncryptionService()
+    // const encryption = new EncryptionService()
     const text = 'Hello World'
     const ciphertext = encryption.encrypt(text)
     const result = encryption.decrypt(ciphertext)
@@ -26,5 +26,11 @@ describe('ezss.EncryptionService', () => {
     const ciphertext = encryption.encrypt(text)
     const result = encryption.decrypt(ciphertext)
     expect(result).eq(text)
+  })
+
+  test('singleton', () => {
+    const e1 = new EncryptionService({ keyPrefix: '1' })
+    const e2 = new EncryptionService({ keySuffix: '2' })
+    expect(e1).eq(e2)
   })
 })

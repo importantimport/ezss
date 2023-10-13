@@ -24,11 +24,12 @@ pnpm add ezss
 
 ```ts
 import { useLocalStorage } from '@mantine/hooks'
-import { EncryptionService } from 'ezss'
+import encryption from 'ezss' // A
+// import { EncryptionService } from 'ezss' // B
 
 export const useSecureLocalStorage =
   <T = string>(props: Parameters<typeof useLocalStorage<T>>[0]) => {
-    const encryption = new EncryptionService()
+    // const encryption = new EncryptionService() // B
 
     return useLocalStorage<T>({
       ...props,

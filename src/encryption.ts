@@ -5,22 +5,23 @@ import Utf8 from 'crypto-js/enc-utf8'
 
 import { getFingerprint } from '~/fingerprint.ts'
 
-/**
- * EZSS Encryption Service
- */
+/** EZSS Encryption Service Options */
 export type EncryptionServiceOptions = {
   keyPrefix?: string
   keySuffix?: string
 }
 
-/**
- * EZSS Encryption Service
- */
+/** EZSS Encryption Service */
 export class EncryptionService {
-  key: string
+  static _instance: EncryptionService
+  key!: string
 
   constructor({ keyPrefix, keySuffix }: EncryptionServiceOptions = {}) {
+    if (EncryptionService._instance)
+      return EncryptionService._instance
+
     this.key = `${keyPrefix}${getFingerprint()}${keySuffix}`
+    EncryptionService._instance = this
   }
 
   decrypt(ciphertext: string) {
@@ -31,3 +32,6 @@ export class EncryptionService {
     return AES.encrypt(message, this.key).toString()
   }
 }
+
+/** EZSS Encryption Service */
+export const encryption = Object.freeze(new EncryptionService())

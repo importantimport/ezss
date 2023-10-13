@@ -1,2 +1,2 @@
-export { EncryptionService } from '~/encryption.ts'
+export { EncryptionService, encryption as default } from '~/encryption.ts'
 export { getFingerprint } from '~/fingerprint.ts'
