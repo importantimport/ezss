@@ -1,0 +1,37 @@
+{
+  "name": "ezss",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Easier alternative of react-secure-storage.",
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@importantimport/eslint-config": "^0.2.0",
+    "@importantimport/eslint-config-ts": "^0.2.0",
+    "@importantimport/tsconfig": "^0.0.1",
+    "@types/crypto-js": "^4.1.2",
+    "canvas": "^2.11.2",
+    "crypto-js": "^4.1.1",
+    "eslint": "^8.51.0",
+    "jsdom": "^22.1.0",
+    "ohash": "^1.1.3",
+    "tsup": "^7.2.0",
+    "tsx": "^3.13.0",
+    "vite": "^4.4.11",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  }
+}
