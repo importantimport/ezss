@@ -1,5 +1,5 @@
 // eslint-disable-next-line n/no-unpublished-import
-import { murmurHash } from 'ohash'
+import { fnv1a52 } from '~/lib/fnv1a52.ts'
 
 /** {@link https://browserleaks.com/canvas#how-does-it-work} */
 export const getFingerprint = () => {
@@ -25,7 +25,7 @@ export const getFingerprint = () => {
     // TODO: test
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    return murmurHash(fingerprint, 256)
+    return fnv1a52(fingerprint)
   }
   catch {
     return
