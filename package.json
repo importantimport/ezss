@@ -1,7 +1,7 @@
 {
   "name": "ezss",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Easier alternative of react-secure-storage.",
   "author": "藍+85CD",
   "license": "MIT",
