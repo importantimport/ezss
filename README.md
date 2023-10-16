@@ -27,11 +27,11 @@ import { useLocalStorage } from '@mantine/hooks'
 import encryption from 'ezss' // A
 // import { EncryptionService } from 'ezss' // B
 
-export const useSecureLocalStorage =
-  <T = string>(props: Parameters<typeof useLocalStorage<T>>[0]) => {
-    // const encryption = new EncryptionService() // B
+// const encryption = new EncryptionService() // B
 
-    return useLocalStorage<T>({
+export const useSecureLocalStorage =
+  <T = string>(props: Parameters<typeof useLocalStorage<T>>[0]) =>
+    useLocalStorage<T>({
       ...props,
       serialize: value => encryption.encrypt(JSON.stringify(value)),
       deserialize: value => {
@@ -44,7 +44,6 @@ export const useSecureLocalStorage =
         } else return value
       },
     })
-  }
 ```
 
 ## License
